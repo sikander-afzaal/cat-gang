@@ -338,102 +338,109 @@ const Home = ({ mintItem, connect, killSession, connected }) => {
           MADE IT TO OUR WHITELIST! <br /> YOU ARE ABLE TO MINT UP TO 10 NFTS AT
           THE PRICE OF 0.05 ETH
         </p>
-        <div className="left-mint">
-          <div className="tab-row">
-            <div className="tab">
-              <img src="/tab1.svg" alt="" />
-              <div className="tab-text">
-                <p>WHITELISTERS</p>
-                <h2>0.05 ETH</h2>
+        {isMinted && window.innerWidth < 1305 ? (
+          <></>
+        ) : (
+          <div className="left-mint">
+            <div className="tab-row">
+              <div className="tab">
+                <img src="/tab1.svg" alt="" />
+                <div className="tab-text">
+                  <p>WHITELISTERS</p>
+                  <h2>0.05 ETH</h2>
+                </div>
+              </div>
+              <div className="tab">
+                <img
+                  src={`/tab2-${stateOfNft === 2 ? "purple" : "black"}.svg`}
+                  alt=""
+                />
+                <div className="tab-text">
+                  <p>Public Sale</p>
+                  <h2>0.06 ETH</h2>
+                </div>
+              </div>
+              <div className="tab">
+                <img
+                  src={`/tab2-${stateOfNft === 3 ? "purple" : "black"}.svg`}
+                  alt=""
+                />
+                <div className="tab-text">
+                  <p>Revel</p>
+                  <h2>0.07 ETH</h2>
+                </div>
               </div>
             </div>
-            <div className="tab">
+            <div className="mint-section">
               <img
-                src={`/tab2-${stateOfNft === 2 ? "purple" : "black"}.svg`}
+                src={selected > 0 ? "/select.png" : "/unselect.png"}
                 alt=""
               />
-              <div className="tab-text">
-                <p>Public Sale</p>
-                <h2>0.06 ETH</h2>
-              </div>
-            </div>
-            <div className="tab">
-              <img
-                src={`/tab2-${stateOfNft === 3 ? "purple" : "black"}.svg`}
-                alt=""
-              />
-              <div className="tab-text">
-                <p>Revel</p>
-                <h2>0.07 ETH</h2>
+              <div className="select-mint">
+                <img
+                  onClick={() => setSelected(1)}
+                  className={selected >= 1 ? "selected" : ""}
+                  src="/small.png"
+                  alt=""
+                />
+                <img
+                  onClick={() => setSelected(2)}
+                  className={selected >= 2 ? "selected" : ""}
+                  src="/small.png"
+                  alt=""
+                />
+                <img
+                  onClick={() => setSelected(3)}
+                  className={selected >= 3 ? "selected" : ""}
+                  src="/small.png"
+                  alt=""
+                />
+                <img
+                  onClick={() => setSelected(4)}
+                  className={selected >= 4 ? "selected" : ""}
+                  src="/small.png"
+                  alt=""
+                />
+                <img
+                  onClick={() => setSelected(5)}
+                  className={selected >= 5 ? "selected" : ""}
+                  src="/small.png"
+                  alt=""
+                />
+                <img
+                  onClick={() => setSelected(6)}
+                  className={selected >= 6 ? "selected" : ""}
+                  src="/small.png"
+                  alt=""
+                />
+                <img
+                  onClick={() => setSelected(7)}
+                  className={selected >= 7 ? "selected" : ""}
+                  src="/small.png"
+                  alt=""
+                />
+                <img
+                  onClick={() => setSelected(8)}
+                  className={selected >= 8 ? "selected" : ""}
+                  src="/small.png"
+                  alt=""
+                />
+                <img
+                  onClick={() => setSelected(9)}
+                  className={selected >= 9 ? "selected" : ""}
+                  src="/small.png"
+                  alt=""
+                />
+                <img
+                  onClick={() => setSelected(10)}
+                  className={selected >= 10 ? "selected" : ""}
+                  src="/small.png"
+                  alt=""
+                />
               </div>
             </div>
           </div>
-          <div className="mint-section">
-            <img src={selected > 0 ? "/select.png" : "/unselect.png"} alt="" />
-            <div className="select-mint">
-              <img
-                onClick={() => setSelected(1)}
-                className={selected >= 1 ? "selected" : ""}
-                src="/small.png"
-                alt=""
-              />
-              <img
-                onClick={() => setSelected(2)}
-                className={selected >= 2 ? "selected" : ""}
-                src="/small.png"
-                alt=""
-              />
-              <img
-                onClick={() => setSelected(3)}
-                className={selected >= 3 ? "selected" : ""}
-                src="/small.png"
-                alt=""
-              />
-              <img
-                onClick={() => setSelected(4)}
-                className={selected >= 4 ? "selected" : ""}
-                src="/small.png"
-                alt=""
-              />
-              <img
-                onClick={() => setSelected(5)}
-                className={selected >= 5 ? "selected" : ""}
-                src="/small.png"
-                alt=""
-              />
-              <img
-                onClick={() => setSelected(6)}
-                className={selected >= 6 ? "selected" : ""}
-                src="/small.png"
-                alt=""
-              />
-              <img
-                onClick={() => setSelected(7)}
-                className={selected >= 7 ? "selected" : ""}
-                src="/small.png"
-                alt=""
-              />
-              <img
-                onClick={() => setSelected(8)}
-                className={selected >= 8 ? "selected" : ""}
-                src="/small.png"
-                alt=""
-              />
-              <img
-                onClick={() => setSelected(9)}
-                className={selected >= 9 ? "selected" : ""}
-                src="/small.png"
-                alt=""
-              />
-              <img
-                onClick={() => setSelected(10)}
-                className={selected >= 10 ? "selected" : ""}
-                src="/small.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
+        )}
         <div className="right-mint">
           <div className="purple-box">
             {isMinted ? (

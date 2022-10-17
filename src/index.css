@@ -393,7 +393,7 @@ header .flex {
     display: none !important;
   }
   .main-mint-page > p {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     max-width: 580px;
     font-size: 14px;
   }
@@ -412,6 +412,7 @@ header .flex {
     align-items: center;
     width: 100%;
     max-width: 580px;
+    margin-top: 20px;
   }
   .tab-row {
     justify-content: center;
