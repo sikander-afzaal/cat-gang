@@ -37,6 +37,7 @@ const Home = ({ mintItem, connect, killSession, connected }) => {
   const [msgContent, setMsgContent] = useState("");
   const [selected, setSelected] = useState(0);
   const [toggleBtn, setToggleBtn] = useState(false);
+  const [stateOfNft, setStateOfNft] = useState(1); // for the arrows in first page
   const handleClose = () => setShow(false);
   const [count, setCount] = useState(0);
   const [timerDays, setTimerDays] = useState("00");
@@ -347,10 +348,24 @@ const Home = ({ mintItem, connect, killSession, connected }) => {
               </div>
             </div>
             <div className="tab">
-              <img src="/tab2.svg" alt="" />
+              <img
+                src={`/tab2-${stateOfNft === 2 ? "purple" : "black"}.svg`}
+                alt=""
+              />
+              <div className="tab-text">
+                <p>Public Sale</p>
+                <h2>0.06 ETH</h2>
+              </div>
             </div>
             <div className="tab">
-              <img src="/tab2.svg" alt="" />
+              <img
+                src={`/tab2-${stateOfNft === 3 ? "purple" : "black"}.svg`}
+                alt=""
+              />
+              <div className="tab-text">
+                <p>Revel</p>
+                <h2>0.07 ETH</h2>
+              </div>
             </div>
           </div>
           <div className="mint-section">
