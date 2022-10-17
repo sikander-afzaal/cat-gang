@@ -1,0 +1,714 @@
+body {
+  margin: 0;
+  font-family: "Helvetica", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0f0f0f !important;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+.App {
+  color: white;
+}
+.container-main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding-inline: 30px;
+}
+header {
+  max-width: 1500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+header .flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.header .flex img {
+  width: 100px;
+  object-fit: contain;
+}
+.home-btn {
+  width: 142px;
+  height: 61px;
+  border: 3px solid #ffffff;
+  border-radius: 30px;
+  color: white;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-size: 16px;
+}
+.container-main p {
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0px;
+}
+.connect-wallet-btn {
+  width: 200px;
+  height: 61px;
+  border: 3px solid #7100ff;
+  background-color: transparent;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  border-radius: 100vh;
+  font-size: 16px;
+  gap: 15px;
+}
+.connect-wallet-btn svg {
+  font-size: 20px;
+}
+.main-mint-page {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 20px;
+  column-gap: 50px;
+}
+.left-mint {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  min-width: 550px;
+}
+.tab-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.tab {
+  margin-inline: -5px;
+  width: 100%;
+  min-width: 200px;
+  position: relative;
+  height: 64px;
+}
+.tab img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.tab-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.tab-text p {
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.tab-text h2 {
+  font-weight: 300;
+  font-size: 26px;
+}
+.mint-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.mint-section > img {
+  width: 100%;
+  max-width: 580px;
+}
+.select-mint {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.select-mint img {
+  width: 100%;
+  cursor: pointer;
+  opacity: 0.4;
+}
+.select-mint .selected {
+  opacity: 1;
+}
+.right-mint {
+  width: 100%;
+  min-width: 450px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.purple-box {
+  padding: 30px 20px;
+  background-color: transparent;
+  border: 4px solid #7100ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+  position: relative;
+}
+.purple-box:before {
+  position: absolute;
+  left: -4px;
+  top: 100%;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 50px 0 0;
+  border-color: #7100ff transparent transparent transparent;
+}
+.purple-box:after {
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 40px 0 0;
+  border-color: #0f0f0f transparent transparent transparent;
+}
+.right-mint h1 {
+  text-transform: uppercase;
+  font-size: 40px;
+}
+.calc-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.calc-div button {
+  height: 60px;
+  width: 50px;
+  font-size: 25px;
+  color: white;
+  border: 2px solid #333232;
+  border-radius: 5px;
+  background-color: transparent;
+}
+.calc-div .max {
+  min-width: 80px;
+  width: auto;
+  font-size: 18px;
+  border-color: #7100ff;
+  color: #7100ff;
+}
+.calc-div h3 {
+  font-size: 70px;
+  color: #7100ff;
+  font-weight: 700;
+}
+.calc-div h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.calc-div h2 span {
+  font-weight: 300;
+  font-size: 16px;
+}
+.total-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  width: 100%;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+.total-div h2 span {
+  font-size: 20px;
+  font-weight: 300;
+}
+.purple-box > p {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  align-self: flex-start;
+  margin-top: 15px;
+}
+.purple-box > p span {
+  font-weight: 700;
+  font-size: 20px;
+}
+.connect {
+  width: 100%;
+  background-color: #7100ff;
+  height: 80px;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  border: none;
+}
+.countdown-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 20px;
+  width: 100%;
+}
+.left-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.left-count h2 {
+  text-transform: uppercase;
+  font-size: 13px;
+  align-self: flex-end;
+}
+.left-count time {
+  width: 100%;
+  border: 2px solid #7100ff;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  letter-spacing: 5px;
+}
+.mobile {
+  display: none;
+}
+.desktop {
+  display: block;
+}
+@media screen and (max-width: 1305px) {
+  header .flex {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  header {
+    max-width: 580px;
+  }
+  .desktop {
+    display: none !important;
+  }
+  .main-mint-page > p {
+    margin-bottom: 20px;
+    max-width: 580px;
+    font-size: 14px;
+  }
+  .main-mint-page > p br {
+    display: none;
+  }
+  .main-mint-page {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-mint {
+    align-items: center;
+    width: 100%;
+    max-width: 580px;
+  }
+  .tab-row {
+    justify-content: center;
+  }
+  .tab {
+    min-width: 120px;
+    max-width: 100%;
+    height: 50px;
+  }
+  .tab-text {
+    top: 50%;
+  }
+  .tab-text p {
+    font-size: 12px;
+  }
+  .tab-text h2 {
+    margin: 5px;
+    margin-bottom: 0px;
+    font-size: 17px;
+  }
+  .tab img {
+    width: 100%;
+    height: 50px;
+  }
+  .select-mint {
+    width: 100%;
+    max-width: 580px;
+    gap: 10px;
+  }
+  .select-mint img {
+    width: 45px;
+    object-fit: contain;
+  }
+  .countdown-div {
+    display: none;
+  }
+  .right-mint {
+    width: 100%;
+    margin-top: 0px;
+    max-width: 580px;
+  }
+  .purple-box {
+    border: none;
+    max-width: 580px;
+    width: 100%;
+    min-width: 0px;
+  }
+  .purple-box::before {
+    display: none;
+  }
+  .purple-box h1,
+  .purple-box > img {
+    display: none;
+  }
+  .calc-div {
+    gap: 20px;
+  }
+  .calc-div h3 span {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+  }
+  .calc-div button {
+    width: 100%;
+    height: 70px;
+    max-width: 90px;
+  }
+  .connect {
+    height: 70px;
+  }
+  .back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 73px;
+    height: 35px;
+    border: 2px solid #7100ff;
+    border-radius: 18px;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .back p,
+  .back svg {
+    font-size: 11px;
+  }
+  header > img {
+    width: 133px;
+    object-fit: contain;
+  }
+  .toggle-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 68px;
+    height: 35px;
+    border: 2px solid #333232;
+    background-color: transparent;
+    border-radius: 100vh;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+  .toggle-btn svg {
+    position: absolute;
+    left: 0;
+    width: 48px;
+    pointer-events: none;
+    top: 50%;
+    transition: all 0.5s ease-in-out;
+    transform: translate(-20%, -50%);
+    height: 35px;
+    border-radius: 100vh;
+    color: white;
+    padding: 7px;
+    background-color: #0f0f0f;
+    border: 2px solid #7100ff;
+    box-sizing: border-box !important;
+  }
+  .active-toggle svg {
+    transform: translate(18px, -50%);
+  }
+  .active-toggle {
+    background-color: #7100ff;
+  }
+}
+@media screen and (max-width: 575px) {
+  header {
+    max-width: 100%;
+  }
+  .container-main {
+    padding-inline: 20px;
+  }
+  .main-mint-page > p {
+    max-width: 355px;
+    line-height: 1.5;
+  }
+  .tab {
+    width: 100%;
+  }
+  .tab-text {
+    gap: 0px;
+  }
+  .tab-text p {
+    font-size: 11px;
+  }
+  .tab-text h2 {
+    margin: 0px;
+  }
+  .mint-section,
+  .left-mint {
+    /* max-width: 355px; */
+    min-width: 0px;
+  }
+  .mint-section > img {
+    /* max-width: 355px; */
+  }
+  .select-mint {
+    min-width: 0px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
+  .select-mint img {
+    width: 100%;
+  }
+  .right-mint {
+    max-width: 100%;
+    min-width: 0px;
+    padding: 0px;
+  }
+  .purple-box {
+    padding: 0px;
+  }
+  .connect {
+    height: 55px;
+    font-size: 18px;
+  }
+}
+/* .content-container {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+.btn-container {
+  padding: 10px 0px 30px 0px;
+}
+
+.left-container {
+  border: 5px solid #b7ff00;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 47px;
+}
+
+.left-video {
+  border-radius: 40px;
+  width: 100%;
+}
+
+.right-container {
+  border: 5px solid #b7ff00;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 47px;
+  background: black;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo-image {
+  padding: 50px;
+}
+
+.rebel-text {
+  font-family: "Reem Kufi";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+  text-align: center;
+
+  color: #b7ff00;
+}
+
+.count-btn {
+  background: #b7ff00;
+  border: none;
+  border-radius: 10px;
+}
+
+.mark-container {
+  padding: 5px 10px;
+}
+
+.control-container {
+  border: 1px solid #b7ff00;
+  width: 204px;
+  border-radius: 14px;
+  margin: 0px auto;
+}
+
+.connect-wallet-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.connect-wallet-btn {
+  background: #b7ff00;
+  border: 3px solid #b7ff00;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.connect-wallet {
+  font-family: "Reem Kufi";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  color: #000000;
+  width: 250px;
+}
+
+.spinner-grow {
+  vertical-align: 0 !important;
+}
+
+.mint-btn {
+  background: #b7ff00;
+  border: 3px solid #b7ff00;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 140px;
+}
+
+.mint-btn-text {
+  font-family: "Reem Kufi";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: center;
+  color: #000000;
+}
+
+.mint-btn-container {
+  padding-bottom: 10vh;
+}
+
+.icon-img-container {
+  padding-top: 10px;
+}
+
+.icon-img {
+  width: 50px;
+  padding: 5px;
+  margin: 2px 5px;
+  border-radius: 50%;
+  box-shadow: rgb(255 255 255) 0px -1px 4px, rgb(255 255 0) 0px -2px 10px,
+    rgb(255 128 0) 0px -10px 20px, red 0px -18px 40px,
+    rgb(0 0 0 / 0%) 5px 5px 15px 5px;
+}
+
+.launchTime-container {
+  margin-bottom: 127px;
+}
+
+.price-text {
+  font-family: "Reem Kufi";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 32px;
+  text-align: center;
+  color: #b7ff00;
+}
+
+@media only screen and (max-width: 600px) {
+  .connect-wallet {
+    font-family: "Reem Kufi";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 48px;
+    text-align: center;
+    color: #000000;
+    width: 220px;
+  }
+
+  .content-container {
+    padding-top: 0px;
+    padding-bottom: 10vh;
+  }
+
+  .right-container {
+    margin-top: 20px;
+  }
+
+  .logo-image {
+    width: 85%;
+    padding: 50px 50px 0px 50px;
+  }
+
+  .rebel-text {
+    font-size: 32px;
+  }
+
+  .icon-img-container {
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .launchTime-container {
+    margin-bottom: 20px;
+  }
+
+  .price-text {
+    font-size: 23px;
+    line-height: 25px;
+  }
+} */
