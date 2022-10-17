@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Helvetica", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #0f0f0f !important;
@@ -125,7 +125,8 @@ header .flex {
 }
 .tab-text h2 {
   font-weight: 300;
-  font-size: 26px;
+  font-size: 22px;
+  font-weight: 500;
 }
 .mint-section {
   width: 100%;
@@ -496,6 +497,7 @@ header .flex {
   }
   .tab-text h2 {
     margin: 0px;
+    font-size: 14px;
   }
   .mint-section,
   .left-mint {

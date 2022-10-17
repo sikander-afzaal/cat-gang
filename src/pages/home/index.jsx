@@ -40,7 +40,7 @@ const Home = ({ mintItem, connect, killSession, connected }) => {
   const [count, setCount] = useState(0);
   const handleShow = () => setShow(true);
 
-  const dateToFormat = "2022-11-01T11:00-0500";
+  const dateToFormat = "2022-10-20";
 
   const countDown = () => {
     if (selected >= 1) {
@@ -260,13 +260,29 @@ const Home = ({ mintItem, connect, killSession, connected }) => {
           THE PRICE OF 0.05 ETH
         </p>
         <img src="/cat-logo.png" className="mobile" alt="" />
-        <button className="connect-wallet-btn desktop">
-          <FontAwesomeIcon icon={faWallet} />
-          Connect Wallet
-        </button>
+        {connected ? (
+          <button className="connect-wallet-btn desktop " onClick={killSession}>
+            <FontAwesomeIcon icon={faWallet} />
+            Connected
+          </button>
+        ) : (
+          <button className="connect-wallet-btn desktop " onClick={connect}>
+            <FontAwesomeIcon icon={faWallet} />
+            Connect Wallet
+          </button>
+        )}
         <button
           className={`mobile toggle-btn ${toggleBtn ? "active-toggle" : ""}`}
-          onClick={() => setToggleBtn((prev) => !prev)}
+          onClick={() =>
+            setToggleBtn((prev) => {
+              if (prev) {
+                killSession();
+              } else {
+                connect();
+              }
+              return !prev;
+            })
+          }
         >
           <FontAwesomeIcon icon={faWallet} />
         </button>
@@ -386,10 +402,17 @@ const Home = ({ mintItem, connect, killSession, connected }) => {
             <p className="desktop">
               REMAINING <br /> <span>8967 / 9900</span>
             </p>
-            <button className="connect">
-              <FontAwesomeIcon icon={faWallet} />
-              Connect WAllet
-            </button>
+            {connected ? (
+              <button className="connect" onClick={killSession}>
+                <FontAwesomeIcon icon={faWallet} />
+                Connected
+              </button>
+            ) : (
+              <button className="connect" onClick={connect}>
+                <FontAwesomeIcon icon={faWallet} />
+                Connect Wallet
+              </button>
+            )}
           </div>
           <div className="countdown-div">
             <div className="left-count">

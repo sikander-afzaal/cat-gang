@@ -1,66 +1,25 @@
 @font-face {
-  font-family: "TisaSansPro-Regular";
-  src: local("TisaSansPro-Regular"),
-    url(fonts/TisaSansPro-Regular.ttf) format("truetype");
+  font-family: "Helvetica";
+  src: url("./font/HelveticaNeue\ Thin.ttf") format("truetype");
+  font-weight: 100;
 }
 @font-face {
-  font-family: "TisaSansPro-Medium";
-  src: local("TisaSansPro-Medium"),
-    url(fonts/TisaSansPro-Medium.ttf) format("truetype");
+  font-family: "Helvetica";
+  src: url("./font/HelveticaNeue\ Light.ttf") format("truetype");
+  font-weight: 300;
 }
 @font-face {
-  font-family: "TisaSansPro-Bold";
-  src: local("TisaSansPro-Bold"),
-    url(fonts/TisaSansPro-Bold.ttf) format("truetype");
+  font-family: "Helvetica";
+  src: url("./font/HelveticaNeue.ttf") format("truetype");
+  font-weight: 400;
 }
 @font-face {
-  font-family: "TisaSansPro-Light";
-  src: local("TisaSansPro-Light"),
-    url(fonts/TisaSansPro-Light.ttf) format("truetype");
-}
-/* Inter font */
-@font-face {
-  font-family: "Inter-Bold";
-  src: local("Inter-Bold"), url(fonts/Inter-Bold.ttf) format("truetype");
-}
-/* Nexa font */
-@font-face {
-  font-family: "NexaDemo-Bold";
-  src: local("NexaDemo-Bold"), url(fonts/NexaDemo-Bold.ttf) format("truetype");
+  font-family: "Helvetica";
+  src: url("./font/HelveticaNeue\ Medium.ttf") format("truetype");
+  font-weight: 500;
 }
 @font-face {
-  font-family: "NexaDemo-Light";
-  src: local("NexaDemo-Light"), url(fonts/NexaDemo-Light.ttf) format("truetype");
-}
-@font-face {
-  font-family: "NexaTextDemo-Bold";
-  src: local("NexaTextDemo-Bold"),
-    url(fonts/NexaTextDemo-Bold.ttf) format("truetype");
-}
-@font-face {
-  font-family: "NexaTextDemo-Light";
-  src: local("NexaTextDemo-Light"),
-    url(fonts/NexaTextDemo-Light.ttf) format("truetype");
-}
-
-/* gemunu font */
-@font-face {
-  font-family: "gemunu-libre.bold";
-  src: local("gemunu-libre.bold"),
-    url(fonts/gemunu-libre.bold.ttf) format("truetype");
-}
-@font-face {
-  font-family: "gemunu-libre.light";
-  src: local("gemunu-libre.light"),
-    url(fonts/gemunu-libre.light.ttf) format("truetype");
-}
-@font-face {
-  font-family: "gemunu-libre.medium";
-  src: local("gemunu-libre.medium"),
-    url(fonts/gemunu-libre.medium.ttf) format("truetype");
-}
-@font-face {
-  font-family: "gemunu-libre.regular";
-  src: local("gemunu-libre.regular"),
-    url(fonts/gemunu-libre.regular.ttf) format("truetype");
+  font-family: "Helvetica";
+  src: url("./font/Helvetica\ Neu\ Bold.ttf") format("truetype");
+  font-weight: 700;
 }
