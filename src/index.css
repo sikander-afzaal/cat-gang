@@ -643,6 +643,9 @@ header .flex {
   .congrats-mob {
     margin-top: 40px;
   }
+  .time-box h1 {
+    font-size: 33px;
+  }
 }
 /* .content-container {
   padding-top: 10vh;

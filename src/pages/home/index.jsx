@@ -481,22 +481,26 @@ const Home = ({ mintItem, connect, killSession, connected }) => {
                 <h2>Countdown to nft revel</h2>
                 <div className="timer-div">
                   <div className="time-box">
-                    <h1>{timerDays}</h1>
+                    <h1>{timerDays < 10 ? `0${timerDays}` : timerDays}</h1>
                     <h3>Days</h3>
                   </div>
                   <p>:</p>
                   <div className="time-box">
-                    <h1>{timerHours}</h1>
+                    <h1>{timerHours < 10 ? `0${timerHours}` : timerHours}</h1>
                     <h3>Hour</h3>
                   </div>
                   <p>:</p>
                   <div className="time-box">
-                    <h1>{timerMinutes}</h1>
+                    <h1>
+                      {timerMinutes < 10 ? `0${timerMinutes}` : timerMinutes}
+                    </h1>
                     <h3>Minutes</h3>
                   </div>
                   <p>:</p>
                   <div className="time-box">
-                    <h1>{timerSeconds}</h1>
+                    <h1>
+                      {timerSeconds < 10 ? `0${timerSeconds}` : timerSeconds}
+                    </h1>
                     <h3>Seconds</h3>
                   </div>
                 </div>
@@ -511,22 +515,26 @@ const Home = ({ mintItem, connect, killSession, connected }) => {
               <h2>Countdown to nft revel</h2>
               <div className="timer-div">
                 <div className="time-box">
-                  <h1>{timerDays}</h1>
+                  <h1>{timerDays < 10 ? `0${timerDays}` : timerDays}</h1>
                   <h3>Days</h3>
                 </div>
                 <p>:</p>
                 <div className="time-box">
-                  <h1>{timerHours}</h1>
+                  <h1>{timerHours < 10 ? `0${timerHours}` : timerHours}</h1>
                   <h3>Hour</h3>
                 </div>
                 <p>:</p>
                 <div className="time-box">
-                  <h1>{timerMinutes}</h1>
+                  <h1>
+                    {timerMinutes < 10 ? `0${timerMinutes}` : timerMinutes}
+                  </h1>
                   <h3>Minutes</h3>
                 </div>
                 <p>:</p>
                 <div className="time-box">
-                  <h1>{timerSeconds}</h1>
+                  <h1>
+                    {timerSeconds < 10 ? `0${timerSeconds}` : timerSeconds}
+                  </h1>
                   <h3>Seconds</h3>
                 </div>
               </div>
