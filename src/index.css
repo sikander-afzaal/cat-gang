@@ -23,6 +23,7 @@ h6 {
   align-items: center;
   flex-direction: column;
   gap: 30px;
+  padding-bottom: 40px;
   padding-inline: 30px;
 }
 header {
@@ -297,21 +298,73 @@ header .flex {
   font-size: 13px;
   align-self: flex-end;
 }
-.left-count time {
+.left-count .timer-div {
   width: 100%;
   border: 2px solid #7100ff;
-  height: 70px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+.timer-div p {
+  font-size: 37px;
+  font-weight: bold;
+}
+.timer-div .time-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
-  letter-spacing: 5px;
+  flex-direction: column;
+}
+.time-box h1 {
+  font-size: 39px;
+  font-weight: 700;
+  color: white;
+  margin: 0px !important;
+}
+.time-box h3 {
+  margin: 0px !important;
+  font-size: 10px;
+  font-weight: 300;
+  color: white;
 }
 .mobile {
   display: none;
 }
 .desktop {
   display: block;
+}
+.purple-box .congrats {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  align-self: center;
+}
+.purple-box .minted {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0px !important;
+  text-align: center;
+  text-transform: uppercase;
+}
+.purple-box .minted span {
+  font-size: 52px;
+  color: #7100ff;
+  line-height: 1;
+  display: block;
+  margin: 0px !important;
+  text-transform: uppercase;
+}
+.purple-box .spread {
+  font-size: 20px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.twitter {
+  width: 170px;
+  object-fit: contain;
 }
 @media screen and (max-width: 1305px) {
   header .flex {
@@ -474,6 +527,66 @@ header .flex {
   .active-toggle {
     background-color: #7100ff;
   }
+  .congrats-mob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 580px;
+  }
+  .congrats-mob h2 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .mint-box-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    border: 2px solid #7100ff;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+  .mint-box-mobile > h1 {
+    font-size: 100px;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+  }
+  .mint-box-mobile > h1 span {
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+    color: #7100ff;
+  }
+  .purple-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-direction: column;
+  }
+  .purple-count h2 {
+    font-size: 18px;
+  }
+  .timer-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .time-box h1 {
+    font-size: 40px;
+  }
+  .congrats-mob > h3 {
+    margin: 10px;
+  }
 }
 @media screen and (max-width: 575px) {
   header {
@@ -526,6 +639,9 @@ header .flex {
   .connect {
     height: 55px;
     font-size: 18px;
+  }
+  .congrats-mob {
+    margin-top: 40px;
   }
 }
 /* .content-container {
