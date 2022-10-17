@@ -369,7 +369,7 @@ header .flex {
   object-fit: contain;
   align-self: center;
 }
-.purple-box > .desktop {
+.purple-box > .desktop2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -388,7 +388,8 @@ header .flex {
   header {
     max-width: 580px;
   }
-  .desktop {
+  .desktop,
+  .purple-box > .desktop2 {
     display: none !important;
   }
   .main-mint-page > p {

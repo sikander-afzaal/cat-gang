@@ -437,7 +437,7 @@ const Home = ({ mintItem, connect, killSession, connected }) => {
         <div className="right-mint">
           <div className="purple-box">
             {isMinted ? (
-              <div className="desktop">
+              <div className="desktop2">
                 <img src="/cat-logo.png" alt="" />
                 <p className="congrats">
                   <strong>Congragulation</strong> <br /> on your
