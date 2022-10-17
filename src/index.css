@@ -176,6 +176,7 @@ header .flex {
   flex-direction: column;
   width: 100%;
   gap: 15px;
+  height: calc(100% - 50px);
   position: relative;
 }
 .purple-box:before {
@@ -361,10 +362,21 @@ header .flex {
   font-size: 20px;
   font-weight: 100;
   text-transform: uppercase;
+  text-align: center;
 }
 .twitter {
   width: 170px;
   object-fit: contain;
+  align-self: center;
+}
+.purple-box > .desktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+  height: 100%;
 }
 @media screen and (max-width: 1305px) {
   header .flex {

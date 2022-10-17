@@ -32,6 +32,7 @@ const Home = ({ mintItem, connect, killSession, connected }) => {
   const [mintedCount, setMintedCount] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [show, setShow] = useState(false);
+  const [isMinted, setIsMinted] = useState(false);
   const [msgTitle, setMsgTitle] = useState("");
   const [msgContent, setMsgContent] = useState("");
   const [selected, setSelected] = useState(0);
@@ -420,64 +421,107 @@ const Home = ({ mintItem, connect, killSession, connected }) => {
         </div>
         <div className="right-mint">
           <div className="purple-box">
-            {/* <div className="desktop">
-              <img src="/cat-logo.png" alt="" />
-              <p className="congrats">
+            {isMinted ? (
+              <div className="desktop">
+                <img src="/cat-logo.png" alt="" />
+                <p className="congrats">
+                  <strong>Congragulation</strong> <br /> on your
+                </p>
+                <h1 className="minted">
+                  05 <span>MINT/S</span>
+                </h1>
+                <h3 className="spread">Spread the word</h3>
+                <img className="twitter" src="/twitter.png" alt="" />
+              </div>
+            ) : (
+              <>
+                <img src="/cat-logo.png" alt="" />
+                <h1>Pre-sale-mint</h1>
+                <div className="calc-div">
+                  <h2 className="desktop">
+                    Amount <br /> <span>max 10</span>
+                  </h2>
+                  <button onClick={countDown}>-</button>
+                  <h3>
+                    {selected <= 9 ? `0${selected}` : selected} <br />{" "}
+                    <span className="mobile">max 10</span>
+                  </h3>
+                  <button onClick={countUp}>+</button>
+                  <button
+                    onClick={() => setSelected(10)}
+                    className="max desktop"
+                  >
+                    MAX
+                  </button>
+                </div>
+                <div className="total-div">
+                  <p>TOTAL</p>
+                  <h2>
+                    0.00<span>ETH</span>
+                  </h2>
+                </div>
+                <p className="desktop">
+                  REMAINING <br /> <span>8967 / 9900</span>
+                </p>
+                {connected ? (
+                  <button className="connect" onClick={killSession}>
+                    <FontAwesomeIcon icon={faWallet} />
+                    Connected
+                  </button>
+                ) : (
+                  <button className="connect" onClick={connect}>
+                    <FontAwesomeIcon icon={faWallet} />
+                    Connect Wallet
+                  </button>
+                )}
+              </>
+            )}
+          </div>
+          {isMinted ? (
+            <div className="mobile congrats-mob">
+              <p>
                 <strong>Congragulation</strong> <br /> on your
               </p>
-              <h1 className="minted">
-                05 <span>MINT/S</span>
-              </h1>
+              <div className="mint-box-mobile">
+                <h1>
+                  05 <span>MINT/S</span>
+                </h1>
+                <div className="purple-count">
+                  <h2>Countdown to nft revel</h2>
+                  <div className="timer-div">
+                    <div className="time-box">
+                      <h1>{timerDays < 10 ? `0${timerDays}` : timerDays}</h1>
+                      <h3>Days</h3>
+                    </div>
+                    <p>:</p>
+                    <div className="time-box">
+                      <h1>{timerHours < 10 ? `0${timerHours}` : timerHours}</h1>
+                      <h3>Hour</h3>
+                    </div>
+                    <p>:</p>
+                    <div className="time-box">
+                      <h1>
+                        {timerMinutes < 10 ? `0${timerMinutes}` : timerMinutes}
+                      </h1>
+                      <h3>Minutes</h3>
+                    </div>
+                    <p>:</p>
+                    <div className="time-box">
+                      <h1>
+                        {timerSeconds < 10 ? `0${timerSeconds}` : timerSeconds}
+                      </h1>
+                      <h3>Seconds</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img src="/date.png" alt="" />
               <h3 className="spread">Spread the word</h3>
               <img className="twitter" src="/twitter.png" alt="" />
-            </div> */}
-            <>
-              <h1>Pre-sale-mint</h1>
-              <div className="calc-div">
-                <h2 className="desktop">
-                  Amount <br /> <span>max 10</span>
-                </h2>
-                <button onClick={countDown}>-</button>
-                <h3>
-                  {selected <= 9 ? `0${selected}` : selected} <br />{" "}
-                  <span className="mobile">max 10</span>
-                </h3>
-                <button onClick={countUp}>+</button>
-                <button onClick={() => setSelected(10)} className="max desktop">
-                  MAX
-                </button>
-              </div>
-              <div className="total-div">
-                <p>TOTAL</p>
-                <h2>
-                  0.00<span>ETH</span>
-                </h2>
-              </div>
-              <p className="desktop">
-                REMAINING <br /> <span>8967 / 9900</span>
-              </p>
-              {connected ? (
-                <button className="connect" onClick={killSession}>
-                  <FontAwesomeIcon icon={faWallet} />
-                  Connected
-                </button>
-              ) : (
-                <button className="connect" onClick={connect}>
-                  <FontAwesomeIcon icon={faWallet} />
-                  Connect Wallet
-                </button>
-              )}
-            </>
-          </div>
-          <div className="mobile congrats-mob">
-            <p>
-              <strong>Congragulation</strong> <br /> on your
-            </p>
-            <div className="mint-box-mobile">
-              <h1>
-                05 <span>MINT/S</span>
-              </h1>
-              <div className="purple-count">
+            </div>
+          ) : (
+            <div className="countdown-div">
+              <div className="left-count">
                 <h2>Countdown to nft revel</h2>
                 <div className="timer-div">
                   <div className="time-box">
@@ -505,42 +549,9 @@ const Home = ({ mintItem, connect, killSession, connected }) => {
                   </div>
                 </div>
               </div>
+              <img src="/date.png" alt="" />
             </div>
-            <img src="/date.png" alt="" />
-            <h3 className="spread">Spread the word</h3>
-            <img className="twitter" src="/twitter.png" alt="" />
-          </div>
-          <div className="countdown-div">
-            <div className="left-count">
-              <h2>Countdown to nft revel</h2>
-              <div className="timer-div">
-                <div className="time-box">
-                  <h1>{timerDays < 10 ? `0${timerDays}` : timerDays}</h1>
-                  <h3>Days</h3>
-                </div>
-                <p>:</p>
-                <div className="time-box">
-                  <h1>{timerHours < 10 ? `0${timerHours}` : timerHours}</h1>
-                  <h3>Hour</h3>
-                </div>
-                <p>:</p>
-                <div className="time-box">
-                  <h1>
-                    {timerMinutes < 10 ? `0${timerMinutes}` : timerMinutes}
-                  </h1>
-                  <h3>Minutes</h3>
-                </div>
-                <p>:</p>
-                <div className="time-box">
-                  <h1>
-                    {timerSeconds < 10 ? `0${timerSeconds}` : timerSeconds}
-                  </h1>
-                  <h3>Seconds</h3>
-                </div>
-              </div>
-            </div>
-            <img src="/date.png" alt="" />
-          </div>
+          )}
         </div>
       </div>
     </div>
